@@ -1,26 +1,20 @@
 // Code your solution here
 
+function findMatching(drivers, driverWeAreLookingFor) {
 
-function findMatching(drivers, name) {
-
- 
-   return drivers.filter(driver => driver.toUpperCase() === name.toUpperCase())
-}
-
-
-
-
-function fuzzyMatch(drivers, name) {
-
-        let length = name.length
-    return drivers.filter(driver => driver.slice(0, length) === name)
+        return drivers.filter(name => name.toUpperCase() === driverWeAreLookingFor.toUpperCase());
 
 
 }
 
-function matchName(drivers, personName) {
+function fuzzyMatch(drivers, driverWeAreLookingFor) {
 
-    return drivers.filter(driver => driver.name === personName)
+        return drivers.filter(name => name.slice(0,2) === driverWeAreLookingFor)
+}
 
+function matchName(drivers, nameWeAreLookingFor) {
 
+    const driverWeAreLookingFor = drivers.filter(driver => driver.name === nameWeAreLookingFor)
+
+    return driverWeAreLookingFor;
 }
